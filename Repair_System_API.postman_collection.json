@@ -1,0 +1,89 @@
+{
+	"info": {
+		"_postman_id": "repair-system-api-collection",
+		"name": "Repair System API",
+		"description": "Colección de Postman para probar la Repair System API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET /status",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/status",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"status"
+					]
+				},
+				"description": "Primera llamada: Obtiene un sistema averiado aleatorio"
+			},
+			"response": []
+		},
+		{
+			"name": "GET /repair-bay",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/repair-bay",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"repair-bay"
+					]
+				},
+				"description": "Segunda llamada: Genera página HTML con código de reparación"
+			},
+			"response": []
+		},
+		{
+			"name": "POST /teapot",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/teapot",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"teapot"
+					]
+				},
+				"description": "Tercera llamada: Retorna código HTTP 418"
+			},
+			"response": []
+		},
+		{
+			"name": "GET / (Home)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						""
+					]
+				},
+				"description": "Página de inicio con documentación de la API"
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://localhost:5000",
+			"type": "string"
+		}
+	]
+}
